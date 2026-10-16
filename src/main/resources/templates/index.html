@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Monte seu PC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+    <div class="mx-auto py-10 px-4">
+
+        <h1 class="text-4xl font-bold mb-6 text-center">PC Store</h1>
+
+        <div class="sticky top-0 z-10 bg-white shadow-md p-4 mb-8 rounded-xl">
+            <h2 class="text-2xl font-semibold mb-4 text-center">Resumo da Montagem</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <p><strong>CPU:</strong> <span th:if="${selecionado.cpu}" th:text="${selecionado.cpu.nome}">-</span></p>
+                <p><strong>Placa-Mãe:</strong> <span th:if="${selecionado.placaMae}"
+                        th:text="${selecionado.placaMae.nome}">-</span></p>
+                <p><strong>RAM:</strong> <span th:if="${selecionado.ram}" th:text="${selecionado.ram.nome}">-</span></p>
+                <p><strong>Fonte:</strong> <span th:if="${selecionado.fonte}"
+                        th:text="${selecionado.fonte.nome}">-</span></p>
+                <p><strong>Status:</strong>
+                    <span th:if="${selecionado != null}" th:text="${selecionado.status()}"
+                        th:classappend="${selecionado.status() == 'Computador completo e funcionando'} ? 'text-green-600 font-bold' : 'text-red-600 font-bold'">
+                        Status do computador
+                    </span>
+                </p>
+                <p><strong>Preço Total:</strong> <span class="text-xl font-bold" th:if="${selecionado != null}"
+                        th:text="${'R$ ' + selecionado.precoTotal()} + '0'">R$ 0,00</span></p>
+            </div>
+        </div>
+
+        <!-- CPU -->
+        <div class="mb-8 max-w-4xl mx-auto">
+            <h2 class="text-2xl font-semibold mb-4">Escolha uma CPU</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div th:each="cpu : ${cpus}"
+                    th:classappend="${selecionado.cpu != null and cpu.id == selecionado.cpu.id} ? 'ring-4 ring-blue-400' : ''"
+                    class="p-4 bg-white rounded-xl shadow hover:shadow-md cursor-pointer transition"
+                    th:onclick="'location.href=\'/selecionar/cpu/' + ${cpu.id} + '\';'">
+                    <p class="font-bold text-lg" th:text="${cpu.nome}">Intel i5</p>
+                    <p class="text-sm text-gray-600" th:text="'Socket: ' + ${cpu.socket}">Socket</p>
+                    <p class="text-sm text-gray-600" th:text="'Consumo: ' + ${cpu.consumo} + 'W'">65W</p>
+                    <p class="text-lg font-bold text-blue-600" th:text="${'R$ ' + cpu.preco + '0'}">R$ 0,00</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Placa-Mãe -->
+        <div class="mb-8 max-w-4xl mx-auto">
+            <h2 class="text-2xl font-semibold mb-4">Escolha uma Placa-Mãe</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div th:each="mb : ${placasMae}"
+                    th:classappend="${selecionado.placaMae != null and mb.id == selecionado.placaMae.id} ? 'ring-4 ring-green-400' : ''"
+                    class="p-4 bg-white rounded-xl shadow hover:shadow-md cursor-pointer transition"
+                    th:onclick="'location.href=\'/selecionar/placa-mae/' + ${mb.id} + '\';'">
+                    <p class="font-bold text-lg" th:text="${mb.nome}">Placa-Mãe</p>
+                    <p class="text-sm text-gray-600" th:text="'Socket: ' + ${mb.socket}">Socket</p>
+                    <p class="text-sm text-gray-600" th:text="'Memória: ' + ${mb.tipoMemoria}">DDR4</p>
+                    <p class="text-lg font-bold text-green-600" th:text="${'R$ ' + mb.preco + '0'}">R$ 0,00</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- RAM -->
+        <div class="mb-8 max-w-4xl mx-auto">
+            <h2 class="text-2xl font-semibold mb-4">Escolha a Memória RAM</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div th:each="ram : ${rams}"
+                    th:classappend="${selecionado.ram != null and ram.id == selecionado.ram.id} ? 'ring-4 ring-purple-400' : ''"
+                    class="p-4 bg-white rounded-xl shadow hover:shadow-md cursor-pointer transition"
+                    th:onclick="'location.href=\'/selecionar/ram/' + ${ram.id} + '\';'">
+                    <p class="font-bold text-lg" th:text="${ram.nome}">RAM</p>
+                    <p class="text-sm text-gray-600" th:text="'Tipo: ' + ${ram.tipo}">DDR4</p>
+                    <p class="text-sm text-gray-600" th:text="'Tamanho: ' + ${ram.tamanhoGb} + 'GB'">16GB</p>
+                    <p class="text-lg font-bold text-purple-600" th:text="${'R$ ' + ram.preco + '0'}">R$ 0,00</p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Fonte -->
+        <div class="mb-8 max-w-4xl mx-auto">
+            <h2 class="text-2xl font-semibold mb-4">Escolha a Fonte</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div th:each="fonte : ${fontes}"
+                    th:classappend="${selecionado.fonte != null and fonte.id == selecionado.fonte.id} ? 'ring-4 ring-yellow-400' : ''"
+                    class="p-4 bg-white rounded-xl shadow hover:shadow-md cursor-pointer transition"
+                    th:onclick="'location.href=\'/selecionar/fonte/' + ${fonte.id} + '\';'">
+                    <p class="font-bold text-lg" th:text="${fonte.nome}">Fonte</p>
+                    <p class="text-sm text-gray-600" th:text="'Potência: ' + ${fonte.potencia} + 'W'">500W</p>
+                    <p class="text-lg font-bold text-yellow-600" th:text="${'R$ ' + fonte.preco + '0'}">R$ 0,00</p>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
