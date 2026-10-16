@@ -1,38 +1,37 @@
-Projeto Store 🖥️
-Sobre o projeto
-O Store é um projeto acadêmico desenvolvido por alunos da Faculdade Senac São Paulo, com a proposta de criar um sistema que permita montar um computador de forma simples e prática.
+🖥️ Store — Montagem de Computadores
+O Store é um projeto acadêmico desenvolvido por alunos da Faculdade Senac São Paulo. A ideia é criar uma aplicação que facilite a montagem de computadores, permitindo escolher componentes, calcular o preço total e verificar se as peças são compatíveis.
 
-A aplicação permite escolher os principais componentes de um computador, como processador (CPU), placa-mãe, memória RAM e fonte de alimentação. A partir das escolhas, o sistema calcula o preço total e verifica se os componentes são compatíveis entre si, além de conferir se a fonte possui potência suficiente para alimentar o conjunto.
+📌 Sobre o projeto
+O sistema permite montar uma configuração de computador selecionando quatro componentes principais:
 
-Mais do que desenvolver uma aplicação funcional, o projeto foi uma oportunidade de colocar em prática os conhecimentos adquiridos durante o curso e entender melhor como os conceitos de programação podem ser utilizados em uma situação real.
+CPU: processador do computador.
+Placa-mãe: componente responsável pela conexão entre as peças.
+Memória RAM: memória utilizada durante a execução dos programas.
+Fonte de alimentação: responsável por fornecer energia aos componentes.
+Após selecionar as peças, o sistema calcula o valor total da configuração e verifica se todos os componentes são compatíveis e se a fonte possui potência suficiente para o funcionamento do conjunto.
 
-Como funciona?
-O usuário pode selecionar os componentes que deseja utilizar na montagem do computador. Com base nessa configuração, o sistema apresenta o valor total das peças e informa se o computador está completo e funcionando corretamente ou se existe algum problema de compatibilidade ou alimentação elétrica.
+⚙️ Funcionalidades
+Seleção dos componentes do computador.
+Verificação de compatibilidade entre CPU e placa-mãe.
+Verificação de compatibilidade entre memória RAM e placa-mãe.
+Validação da potência da fonte de alimentação.
+Cálculo do preço total da configuração.
+Exibição do status do computador conforme os componentes selecionados.
+🛠️ Tecnologias e conceitos
+Java — desenvolvimento da lógica da aplicação.
+Programação Orientada a Objetos (POO) — organização do sistema em classes e objetos.
+Herança — compartilhamento de atributos por meio da classe abstrata Componente.
+Composição — associação dos componentes à classe Computador.
+Enums — definição dos tipos de socket e memória.
+Git e GitHub — versionamento e compartilhamento do código, caso utilizados no projeto.
+📚 Aprendizados
+O desenvolvimento do Store proporcionou a oportunidade de colocar em prática os conceitos estudados em aula, especialmente herança, composição e organização de classes em Java.
 
-Entre as principais funcionalidades, estão:
+Além disso, o projeto ajudou a desenvolver o raciocínio lógico e a compreensão de como implementar regras de negócio para resolver problemas práticos.
 
-Seleção dos componentes para montar o computador.
-Verificação da compatibilidade entre CPU, placa-mãe e memória RAM.
-Verificação da potência da fonte de alimentação.
-Cálculo automático do preço total dos componentes.
-Exibição do status da configuração escolhida.
-Tecnologias e conceitos utilizados
-Durante o desenvolvimento, foram trabalhados conceitos importantes para a construção de aplicações em Java, como:
+✅ Status
+Projeto concluído.
 
-Java: linguagem utilizada na implementação da lógica do sistema.
-Programação Orientada a Objetos: organização do código por meio de classes e objetos.
-Herança: utilização de uma classe base Componente para compartilhar atributos entre os diferentes tipos de peças.
-Composição: relacionamento entre a classe Computador e os componentes que fazem parte dele.
-Enums: representação dos tipos de socket e memória disponíveis.
-Git e GitHub: ferramentas de versionamento e compartilhamento do código, quando utilizadas no projeto.
-O que aprendemos com o projeto?
-O desenvolvimento do Store ajudou a reforçar os conhecimentos de Java e programação orientada a objetos, principalmente na criação de classes, no relacionamento entre objetos e na implementação de regras de negócio.
+Desenvolvido como atividade acadêmica por alunos da Faculdade Senac São Paulo.
 
-Também foi uma oportunidade de praticar a organização do código e transformar os requisitos de um exercício em uma aplicação que possui uma finalidade prática.
-
-Status do projeto
-Concluído.
-
-O projeto foi desenvolvido como parte das atividades acadêmicas do curso na Faculdade Senac São Paulo, com foco na aplicação prática dos conceitos de programação estudados em aula.
-
-Desenvolvido por alunos da Faculdade Senac São Paulo.
+Projeto educacional desenvolvido para praticar conceitos de programação em Java.
