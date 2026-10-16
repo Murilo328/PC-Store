@@ -1,37 +1,42 @@
-🖥️ Store — Montagem de Computadores
-O Store é um projeto acadêmico desenvolvido por alunos da Faculdade Senac São Paulo. O objetivo é criar uma aplicação que facilite a montagem de computadores, permitindo selecionar componentes, calcular o preço total e verificar a compatibilidade entre as peças.
+🖥️ Store | Montagem de Computadores
 
-📌 Sobre o projeto
-O sistema permite montar uma configuração de computador selecionando quatro componentes principais:
+Projeto acadêmico desenvolvido por alunos da Faculdade Senac São Paulo, com o objetivo de aplicar conceitos de Java e Programação Orientada a Objetos (POO) no desenvolvimento de um sistema de montagem de computadores.
 
-CPU: processador responsável pela execução das instruções do computador.
-Placa-mãe: componente responsável pela conexão e comunicação entre as peças.
-Memória RAM: memória utilizada durante a execução dos programas.
-Fonte de alimentação: responsável por fornecer energia aos componentes.
-Após a seleção dos componentes, o sistema calcula o valor total da configuração, verifica a compatibilidade entre as peças e valida se a fonte de alimentação possui potência suficiente para o funcionamento do conjunto.
+🚀 Sobre o projeto
+
+O Store é uma aplicação que permite montar configurações de computadores a partir da seleção de componentes, verificando a compatibilidade entre as peças e calculando o valor total da configuração.
 
 ⚙️ Funcionalidades
-Seleção de componentes: escolha das peças para montar o computador.
-Compatibilidade entre CPU e placa-mãe: verificação da compatibilidade entre processador e socket.
-Compatibilidade da memória RAM: validação da compatibilidade entre a memória e a placa-mãe.
-Validação da fonte de alimentação: verificação da potência disponível para os componentes.
-Cálculo do preço total: soma dos valores dos componentes selecionados.
-Status da configuração: exibição do estado do computador conforme os componentes escolhidos e as validações realizadas.
-🛠️ Tecnologias e conceitos utilizados
-Java: linguagem utilizada no desenvolvimento da aplicação.
-Programação Orientada a Objetos (POO): organização do sistema por meio de classes e objetos.
-Herança: reutilização de atributos e comportamentos por meio da classe abstrata Componente.
-Composição: associação dos componentes à classe Computador.
-Enums: representação de tipos de socket e memória.
-Git e GitHub: versionamento e compartilhamento do código, caso utilizados no desenvolvimento.
+🧩 Seleção de componentes: CPU, placa-mãe, memória RAM e fonte de alimentação.
+🔗 Verificação de compatibilidade: validação entre processador e placa-mãe.
+💾 Compatibilidade da memória: verificação do tipo de memória RAM suportado.
+⚡ Validação da fonte: verificação da potência necessária para os componentes.
+💰 Cálculo de preço: soma automática dos valores das peças selecionadas.
+🖥️ Status da configuração: indicação do estado do computador conforme as validações realizadas.
+🛠️ Tecnologias e conceitos
+Java — desenvolvimento da aplicação.
+POO (Programação Orientada a Objetos) — organização e estruturação do código.
+Herança — utilização da classe abstrata Componente.
+Composição — associação dos componentes à classe Computador.
+Enums — representação de tipos de socket e memória.
+Git e GitHub — versionamento e compartilhamento do projeto, caso utilizados.
 📚 Aprendizados
-O desenvolvimento do Store proporcionou a oportunidade de aplicar na prática os conceitos estudados em aula, especialmente herança, composição, abstração e organização de classes em Java.
 
-Além disso, o projeto contribuiu para o desenvolvimento do raciocínio lógico, da organização do código e da compreensão de como implementar regras de negócio para resolver problemas práticos.
+Durante o desenvolvimento do Store, foram colocados em prática conceitos fundamentais da programação, como:
 
-✅ Status do projeto
-Projeto concluído.
+Herança e composição em Java.
+Organização de classes e objetos.
+Implementação de regras de negócio.
+Verificação de compatibilidade entre componentes.
+Desenvolvimento do raciocínio lógico.
+✅ Status
 
-Desenvolvido como atividade acadêmica por alunos da Faculdade Senac São Paulo, com foco no aprendizado de Java e Programação Orientada a Objetos (POO).
+🟢 Projeto concluído
 
-Projeto educacional desenvolvido para praticar conceitos de programação em Java.
+🎓 Instituição: Faculdade Senac São Paulo
+
+📌 Finalidade: projeto acadêmico para praticar conceitos de Java e Programação Orientada a Objetos.
+
+<p align="center">
+<strong>💻 STORE — Montando configurações, aplicando conhecimento.</strong>
+</p>
